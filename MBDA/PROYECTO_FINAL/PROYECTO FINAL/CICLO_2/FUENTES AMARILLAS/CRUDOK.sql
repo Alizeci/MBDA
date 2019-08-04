@@ -1,0 +1,58 @@
+---------------------------------------------------------------------------------------------------------------------------
+                                              /*CICLO 1: CRUDOK*/
+---------------------------------------------------------------------------------------------------------------------------
+
+/*PROPUESTA*/
+/*INSERTAR*/
+BEGIN
+PC_PROPUESTAS.AD_PROPUESTA('CC',1075689857,'Ofrezco cinco millones mas al precio original',1);
+END;
+
+/*MODIFICAR*/
+BEGIN
+PC_PROPUESTAS.MO_PROPUESTA(1,30);
+END;
+
+/*CONSULTAR*/
+SELECT PC_PROPUESTAS.CO_PROPUESTA FROM DUAL;
+
+BEGIN
+PA_COMPRADOR.MO_PROPUESTA(1,30);
+END;
+
+
+/*DOCUMENTO*/
+/*INSERTAR*/
+BEGIN
+PC_DOCUMENTOS.AD_DOCUMENTO('PDF');
+END;
+
+/*ELIMINAR*/
+BEGIN
+PC_DOCUMENTOS.EL_DOCUMENTO(2);
+END;
+
+/*CONSULTAR*/
+SELECT PC_DOCUMENTOS.CO_DOCUMENTO FROM DUAL;
+
+
+/*SEGUIMIENTO*/
+/*INSERTAR*/
+BEGIN
+PC_SEGUIMIENTOS.AD_SEGUIMIENTO(1,NULL,6);
+END;
+
+/*MODIFICAR*/
+BEGIN
+PC_SEGUIMIENTOS.MO_SEGUIMIENTO(1,15);
+END;
+
+/*ELIMINAR*/
+BEGIN
+PC_SEGUIMIENTOS.EL_SEGUIMIENTO(1);
+END;
+
+/*CONSULTAR*/
+SELECT PC_SEGUIMIENTOS.CO_SEGUIMIENTO FROM DUAL;
+
+SELECT PC_SEGUIMIENTOS.CO_ACTIVO FROM DUAL;
